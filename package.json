@@ -1,0 +1,35 @@
+{
+  "name": "chat-socketio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/app.js",
+  "scripts": {
+    "start": "node ./app/app.js",
+    "dev": "nodemon ./app/app.js",
+    "phoenix": "rm -rf node_modules && npm i"
+  },
+  "author": "Víctor Romero",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "2.1019.0",
+    "bcrypt": "5.0.1",
+    "cors": "2.8.5",
+    "dotenv": "10.0.0",
+    "express": "4.17.1",
+    "google-auth-library": "7.10.1",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "6.0.11",
+    "mongoose-unique-validator": "3.0.0",
+    "morgan": "1.10.0",
+    "multer": "1.4.3",
+    "socket.io": "4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.1.0",
+    "nodemon": "2.0.13"
+  }
+}
