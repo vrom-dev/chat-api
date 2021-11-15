@@ -1,0 +1,479 @@
+{
+	"info": {
+		"_postman_id": "29ddeab5-1069-4d94-a525-127f8aa2b060",
+		"name": "chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /user (create new user)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOGJmZGNkMTZlZDYyZTZmYTYzMjZkZCIsInVzZXJuYW1lIjoidmljcm9tZXJvZGV2IiwiZW1haWwiOiIxMjMxMjMxMjRAZ21haWwuY29tIiwidXNlckNvbG9yIjoicmdiKDAsIDEyMywgMCkiLCJpYXQiOjE2MzY1NjQ0Mjl9.d0mYaiJsGd7kxvl9hRmwY-byUNDYhdgoLRBQOjiM70k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"victor123\",\r\n    \"password\": \"12345\",\r\n    \"email\": \"vic12345@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /login (login user)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOGJmZGNkMTZlZDYyZTZmYTYzMjZkZCIsInVzZXJuYW1lIjoidmljcm9tZXJvZGV2IiwiZW1haWwiOiIxMjMxMjMxMjRAZ21haWwuY29tIiwidXNlckNvbG9yIjoicmdiKDAsIDEyMywgMCkiLCJpYXQiOjE2MzY3NDU5MTd9.um5jO1GBDhwd2SlFXQxsOXMhMxK2YjS2teYtQKSum6s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"victor123\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /user (get all users)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /user (rename username)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZTYyNGU2MmEzNjdmYzc3ODljYSIsInVzZXJuYW1lIjoidmljdG9yMTIzIiwiZW1haWwiOiJ2aWMxMjM0NUBnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMCwgMCwgMjU1KSIsImlhdCI6MTYzNjk2NTk4Nn0.w2Ntpgy1vmaojvrq2KJus4LOlIV-0WQW0mj701PoWYk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"victor123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user/61921e624e62a367fc7789ca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"61921e624e62a367fc7789ca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /user/active (get active users)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZTYyNGU2MmEzNjdmYzc3ODljYSIsInVzZXJuYW1lIjoidmljdG9yMTIzIiwiZW1haWwiOiJ2aWMxMjM0NUBnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMCwgMCwgMjU1KSIsImlhdCI6MTYzNjk2NTk4Nn0.w2Ntpgy1vmaojvrq2KJus4LOlIV-0WQW0mj701PoWYk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/user/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /user/:id (get user with id)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZTYyNGU2MmEzNjdmYzc3ODljYSIsInVzZXJuYW1lIjoidmljdG9yMTIzIiwiZW1haWwiOiJ2aWMxMjM0NUBnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMCwgMCwgMjU1KSIsImlhdCI6MTYzNjk2NTk4Nn0.w2Ntpgy1vmaojvrq2KJus4LOlIV-0WQW0mj701PoWYk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/user/61921e624e62a367fc7789ca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"61921e624e62a367fc7789ca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /reset (reset DB)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZjk3NGU2MmEzNjdmYzc3ODlkNCIsInVzZXJuYW1lIjoidnJvbWRldiIsImVtYWlsIjoidnJvbWVyb2NvbWlub0BnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMjIwLCAwLCAwKSIsImlhdCI6MTYzNjk2NjMxNn0.qxP2x-89ey4eLJBgu6GvKR4M2jzq2fQQWLi8M6MwgZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /room (create new room)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZjk3NGU2MmEzNjdmYzc3ODlkNCIsInVzZXJuYW1lIjoidnJvbWRldiIsImVtYWlsIjoidnJvbWVyb2NvbWlub0BnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMjIwLCAwLCAwKSIsImlhdCI6MTYzNjk2NjMxNn0.qxP2x-89ey4eLJBgu6GvKR4M2jzq2fQQWLi8M6MwgZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img",
+							"type": "file",
+							"src": "/C:/Users/formacio/Desktop/491168-285x380.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Clash Royale",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/room",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /room (get all rooms)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZjk3NGU2MmEzNjdmYzc3ODlkNCIsInVzZXJuYW1lIjoidnJvbWRldiIsImVtYWlsIjoidnJvbWVyb2NvbWlub0BnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMjIwLCAwLCAwKSIsImlhdCI6MTYzNjk2NjMxNn0.qxP2x-89ey4eLJBgu6GvKR4M2jzq2fQQWLi8M6MwgZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/room",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /room/:id (get room)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZjk3NGU2MmEzNjdmYzc3ODlkNCIsInVzZXJuYW1lIjoidnJvbWRldiIsImVtYWlsIjoidnJvbWVyb2NvbWlub0BnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMjIwLCAwLCAwKSIsImlhdCI6MTYzNjk2NjMxNn0.qxP2x-89ey4eLJBgu6GvKR4M2jzq2fQQWLi8M6MwgZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/room/619220824e62a367fc7789e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"room",
+						"619220824e62a367fc7789e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /room/:id (create message for that room)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZjk3NGU2MmEzNjdmYzc3ODlkNCIsInVzZXJuYW1lIjoidnJvbWRldiIsImVtYWlsIjoidnJvbWVyb2NvbWlub0BnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMjIwLCAwLCAwKSIsImlhdCI6MTYzNjk2NjY5N30.l67-Qm4VIRzrYfO3WXK9jM0P41ubgvNd5PHP6TuU6Pw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"content\": \"LoL is the best game ever 😀\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/room/619220824e62a367fc7789e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"room",
+						"619220824e62a367fc7789e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /room/:id/messages (get room)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZjk3NGU2MmEzNjdmYzc3ODlkNCIsInVzZXJuYW1lIjoidnJvbWRldiIsImVtYWlsIjoidnJvbWVyb2NvbWlub0BnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMjIwLCAwLCAwKSIsImlhdCI6MTYzNjk2NjMxNn0.qxP2x-89ey4eLJBgu6GvKR4M2jzq2fQQWLi8M6MwgZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/room/619220824e62a367fc7789e1/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"room",
+						"619220824e62a367fc7789e1",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /login (login with Google)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOGJmZGNkMTZlZDYyZTZmYTYzMjZkZCIsInVzZXJuYW1lIjoidmljcm9tZXJvZGV2IiwiZW1haWwiOiIxMjMxMjMxMjRAZ21haWwuY29tIiwidXNlckNvbG9yIjoicmdiKDAsIDEyMywgMCkiLCJpYXQiOjE2MzY3NDU5MTd9.um5jO1GBDhwd2SlFXQxsOXMhMxK2YjS2teYtQKSum6s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjAzMmIyZWYzZDJjMjgwNjE1N2Y4YTliOWY0ZWY3Nzk4MzRmODVhZGEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiODk3MDU1MTA2MTAzLTE3NGJ1dnNuZjBxZTliY2ptZzAxY2hmN3Y4ZWdjdmFmLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiODk3MDU1MTA2MTAzLTE3NGJ1dnNuZjBxZTliY2ptZzAxY2hmN3Y4ZWdjdmFmLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA5MDA0MzIwODE0NDQ2Njc5NjM0IiwiZW1haWwiOiJ2cm9tZXJvY29taW5vQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiU0dxM2ZwLVU5RUJfZ1hWcnJkanlYZyIsImlhdCI6MTYzNjk2Njk4OSwiZXhwIjoxNjM2OTcwNTg5LCJqdGkiOiI2Mzc0OWFkMGM2Mzg5YTk0MGVlODNjNTAwNzI2Y2Q1ZjI2NjQxMGJjIn0.w6fYSQH7-BNykU61Vje8tH33C_chj4N_gsrq65C7jsF3biQuQRAglrmxYxjACPoT9UoPHY-bLTX4mAivvTV7Q_H7gOHSYkZU7TCtCN8BTr419EDEpesfTVyn7X-GRjpPL-Ngd00X-qxMENlyB4m0v7n3VfmVZCc7eOTZTc69hX_2Cmk_UgmyjIrFHT3Uuv_yIR1k635NrWbByyPDbAxUb3bnBEcMjp9A0pv6vtuwXzyYPUNQQSscUDQ2Z0N3-wwoqMTtfzKQRf6xYvSeueaxJEQEdMyPGl0rAesRs7jjjy3HNAAMEYqMTeN_w4cIaHBKgxUA2cc4IvuCgNVN8hQmmg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/login/google",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"login",
+						"google"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /files/:key (get File from AWS bucket)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTIxZjk3NGU2MmEzNjdmYzc3ODlkNCIsInVzZXJuYW1lIjoidnJvbWRldiIsImVtYWlsIjoidnJvbWVyb2NvbWlub0BnbWFpbC5jb20iLCJ1c2VyQ29sb3IiOiJyZ2IoMjIwLCAwLCAwKSIsImlhdCI6MTYzNjk2NjY5N30.l67-Qm4VIRzrYfO3WXK9jM0P41ubgvNd5PHP6TuU6Pw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/files/1636914034211_333496818.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"files",
+						"1636914034211_333496818.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
