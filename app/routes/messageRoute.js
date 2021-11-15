@@ -7,7 +7,7 @@ const {
   getAllMessagesFromRoom
 } = require('../controllers/message')
 
-messageRoute.get('/room/:id',
+messageRoute.get('/room/:id/messages',
   tokenExtractor,
   userExtractor,
   getAllMessagesFromRoom
